@@ -1,0 +1,13 @@
+core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
+fsl_clock.h:614:20:CLOCK_SetTpmClock	16	static
+fsl_common.h:212:20:EnableIRQ	16	static
+fsl_adc16.h:382:20:ADC16_EnableHardwareTrigger	16	static
+fsl_tpm.h:579:20:TPM_StartTimer	24	static
+fsl_pit.h:127:20:PIT_GetDefaultConfig	16	static
+fsl_pit.h:181:20:PIT_EnableInterrupts	24	static
+fsl_pit.h:268:20:PIT_SetTimerPeriod	24	static
+fsl_pit.h:308:20:PIT_StartTimer	16	static
+system.c:10:6:system_inicializacionPinesClock	16	static
+system.c:35:6:system_configTPM	32	static
+system.c:52:6:system_configPIT	24	static
+system.c:76:6:system_configADC	16	static
