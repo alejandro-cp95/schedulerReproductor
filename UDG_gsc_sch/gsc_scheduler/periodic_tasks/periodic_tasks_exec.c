@@ -28,6 +28,7 @@
 #include "periodic_tasks_exec.h"
 #include "periodic_tasks_modules.h"
 #include "fsl_gpio.h"
+#include "tasks.h"
 
 
 
@@ -58,5 +59,33 @@
  void periodic_task_500ms(void)
  {
 	 GPIO_TogglePinsOutput(GPIOE, 1);
+ }
+
+ /**************************************************************
+ *  Name                 : periodic_task_1ms
+ *	ID					 : TASK_1MTKS
+ *  Description          : Container for functionality that is
+                           executed periodically.
+ *  Parameters           : none
+ *  Return               : none
+ *  Critical/explanation : no
+ **************************************************************/
+ void periodic_task_1ms(void)
+ {
+	 task_1ms();
+ }
+
+ /**************************************************************
+ *  Name                 : periodic_task_1ms
+ *	ID					 : TASK_1MTKS
+ *  Description          : Container for functionality that is
+                           executed periodically.
+ *  Parameters           : none
+ *  Return               : none
+ *  Critical/explanation : no
+ **************************************************************/
+ void periodic_task_50ms(void)
+ {
+	 conteoPush_actualizacionPWM();
  }
 

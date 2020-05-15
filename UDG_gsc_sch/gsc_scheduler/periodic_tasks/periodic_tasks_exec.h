@@ -36,6 +36,8 @@
 
 void periodic_tasks_exec_1Mtks(void);
 void periodic_task_500ms(void);
+void periodic_task_1ms(void);
+void periodic_task_50ms(void);
 
 #endif /* PERIODIC_TASKS_EXEC_H  */
 

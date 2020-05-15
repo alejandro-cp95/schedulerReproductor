@@ -46,6 +46,8 @@ typedef enum {
     TASK_INIT,
     TASK_1MTKS,
 	TASK_500ms,
+	TASK_1ms,
+	TASK_50ms,
     /* Number of Managers/Applications */
     SCHD_MANAGERS_NUMBER
 } E_MODULES_ID_TYPE;
