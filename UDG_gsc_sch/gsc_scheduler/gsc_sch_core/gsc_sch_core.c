@@ -8,7 +8,7 @@
 * created_by:      MDRR
 * date_created:    July 31 2013 
 *=============================================================================*/
-/* DESCRIPTION : Core of the "Grandpa´s Clock Scheduler"                      */
+/* DESCRIPTION : Core of the "Grandpaï¿½s Clock Scheduler"                      */
 /*============================================================================*/
 /* FUNCTION COMMENT : Main scheduler file with initailization and manager     */
 /*                                                                            */
@@ -106,7 +106,7 @@ void gsc_sch_core_exec(void)
     do
     {
         /* wait for timer interrupt */
-        if (re_sch_mngExecflag)
+        if (re_sch_mngExecflag==SCH_TRUE)
         {
             /* clear timer interrupt flag */
             re_sch_mngExecflag = SCH_FALSE;

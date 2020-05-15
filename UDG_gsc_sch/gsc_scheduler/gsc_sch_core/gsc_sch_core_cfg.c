@@ -36,11 +36,10 @@
 const S_SCH_MANAGER_EXEC_TYPE cps_mngTaskList[SCHD_MANAGERS_NUMBER] = 
 {
    /* Main function,               Init Function,                    Startup delay(ticks),  Execution Period(ticks),   Operation mode */
-    {periodic_tasks_exec_1Mtks,    periodic_tasks_init_task_1Mtks,   1000,                  1000,                      ALL_MODES},
-	{periodic_task_500ms,		   periodic_tasks_init_task_500ms,   500,                   500,                       ALL_MODES},
 	{periodic_task_1ms,		       NULL,   							 1,                   	1,                         ALL_MODES},
 	{periodic_task_50ms,		   NULL,   							 50,                   	50,                        ALL_MODES},
-    //{function_task_name,           task_initialization,              0,                     1,                         ALL_MODES},
+    /*{function_task_name,           task_initialization,              0,                     1,                         ALL_MODES},*/
+
 
     /* NOTE: this list shall be updated according to E_MODULES_ID_TYPE! */
 };

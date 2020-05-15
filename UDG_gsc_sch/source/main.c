@@ -75,8 +75,6 @@ int main(void)
 
     system_configTPM(&tpmInfo, &tpmParam, pwmLevel, dutycycleInicial);
 
-    system_configPIT(&pitConfig);
-
 
 	/* SysTick Configuration */
 	SysTick_Config(48000000U/1000U); //This only applies for ARM Cores with SysTick capability

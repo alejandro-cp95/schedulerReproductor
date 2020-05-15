@@ -44,8 +44,6 @@
 typedef enum {
     /* Add here the IDs Tasks, order them same to Manager/Aplication main function list */
     TASK_INIT,
-    TASK_1MTKS,
-	TASK_500ms,
 	TASK_1ms,
 	TASK_50ms,
     /* Number of Managers/Applications */
