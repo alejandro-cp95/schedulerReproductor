@@ -6,6 +6,7 @@
 #include "clock_config.h"
 
 #include "gsc_sch_core/gsc_sch_core.h"
+#include "gsc_sch_core/gsc_sch_core_cfg.h"
 #include "gsc_sch_core_tick_isr.h"
 #include "core_cm0plus.h"
 
@@ -90,4 +91,10 @@ void SysTick_Handler(void)
  {
  	sys_tick_counter++;
  	gsc_sch_core_tick_isr();
+ 	/* check each module from the list of modules */
+ 	for (E_MODULES_ID_TYPE le_mngIndex = (E_MODULES_ID_TYPE)0; le_mngIndex < SCHD_MANAGERS_NUMBER; le_mngIndex++)
+ 	{
+ 		/* decrement the local counter of modules  */
+ 		lasw_MngTimeCnt[le_mngIndex] -= STEP_IN_TICKS;
+ 	}
  }

@@ -36,7 +36,8 @@
 /*======================================================*/ 
 /* Custom type RAM variables */
     /* rt_curOpMode stores the current mode of operation of the system */
-T_OpModeType  rt_curOpMode; 
+T_OpModeType  rt_curOpMode;
+volatile T_DelayMainType lasw_MngTimeCnt[SCHD_MANAGERS_NUMBER];
 	
 /*======================================================*/ 
 /* close variable declaration sections                  */
@@ -95,7 +96,6 @@ void gsc_sch_core_Init(void)
 void gsc_sch_core_exec(void)
 {
     E_MODULES_ID_TYPE le_mngIndex;
-    T_DelayMainType lasw_MngTimeCnt[SCHD_MANAGERS_NUMBER];    
 
     /* Initialization of local modules counters to delay of module execution from Scheduler start */
     for (le_mngIndex = (E_MODULES_ID_TYPE)0; le_mngIndex < SCHD_MANAGERS_NUMBER; le_mngIndex++)
@@ -115,8 +115,6 @@ void gsc_sch_core_exec(void)
             {
                 if (cps_mngTaskList[le_mngIndex].ManagerAPI != SCHM_NULL_PTR)
                 {
-                    /* decrement the local counter of modules  */
-                    lasw_MngTimeCnt[le_mngIndex] -= STEP_IN_TICKS;    
                     /* check whether counter is expired */
                     if (lasw_MngTimeCnt[le_mngIndex] <= 0)
                     {
